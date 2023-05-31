@@ -89,7 +89,7 @@
 
 .menu-wrap .toggler:checked ~ .menu > div > div {
   opacity: 1;
-  transition: opacity 0.4s ease;
+  transition:  opacity 0.4s ease 0.4s;
 }
 
 .menu-wrap .menu {
@@ -116,11 +116,10 @@
   justify-content: center;
   transform: scale(0);
   transition: all 0.4s ease;
-  overflow-y: scroll;
 }
 
 .menu-wrap .menu > div > div {
-  text-align: left;
+  text-align: center;
   max-width: 90vw;
   max-height: 100vh;
   opacity: 0;
@@ -142,113 +141,4 @@
 
 .menu-wrap .menu > div > div > ul > li > a:hover {
   color: var(--secondary-color);
-}
-
-.menu-wrap .menu > div > div > .card {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-}
-
-.menu-wrap .menu > div > div > .card img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  margin-right: 1rem;
-  border-radius: 5px;
-}
-
-.menu-wrap .menu > div > div > .card .card-text {
-  flex: 1;
-  text-align: left;
-  align-self: flex-start;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 10px;
-  border-radius: 5px;
-  background-color: #f1f1f1;
-}
-
-.menu-wrap .menu > div > div > .card .description {
-  text-align: left;
-  align-self: flex-start;
-  background: #f1f1f1;
-  padding: 10px;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-right: 20%;
-}
-
-.menu-wrap .menu > div > div > .card > p {
-  text-align: left;
-  margin-bottom: 5px;
-}
-.menu-wrap .menu > div > div > .card .price {
-  margin-left: 0; /* Ajusta el valor del margen izquierdo según tus necesidades */
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
-  color: var(--primary-color);
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.menu-wrap .menu > div > div > .card .price:hover {
-  color: var(--secondary-color);
-}
-
-@media screen and (max-width: 768px) {
-  .menu-wrap .menu > div > div {
-    max-width: 80vw;
-    max-height: 80vh;
-  }
-
-  .menu-wrap .menu > div > div > ul > li {
-    font-size: 1.2rem;
-  }
-
-  .menu-wrap .menu > div > div > .card img {
-    max-width: 80px;
-    margin-right: 0.5rem;
-  }
-
-  .menu-wrap .menu > div > div > .card .card-text {
-    margin-left: 0.5rem;
-    padding: 8px;
-  }
-}
-
-/* Media queries para tablet */
-@media screen and (max-width: 1024px) {
-  .menu-wrap .menu > div > div > .card img {
-    max-width: 120px;
-  }
-}
-
-/* Media queries para dispositivos móviles */
-@media screen and (max-width: 480px) {
-  .menu-wrap .menu > div > div > .card img {
-    max-width: 80px;
-    margin-right: 0.5rem;
-  }
-
-  .menu-wrap .menu > div > div > .card .card-text {
-    margin-left: 0.5rem;
-    padding: 6px;
-  }
-
-  .menu-wrap .menu > div > div > .card .price {
-    margin-left: 0.5rem;
-    margin-top: 0.3rem;
-    font-size: 1rem;
-  }
-}
-
-/* Media queries para monitores grandes */
-@media screen and (min-width: 1440px) {
-  .menu-wrap .menu > div > div > .card img {
-    max-width: 150px;
-  }
 }

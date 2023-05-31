@@ -1,5 +1,5 @@
 :root {
-  --primary-color: rgba(13, 110, 139, 0.75);
+  --primary-color: #222;
   --secondary-color: rgba(229, 148, 0, 0.9);
   --overlay-color: rgba(24, 39, 51, 0.85);
   --menu-speed: 0.75s;
@@ -43,14 +43,16 @@ body {
 
 .navbar {
   background-color: rgba(255, 255, 255, 0.9);
-  padding: 10px 15px;
+  padding: 11px 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .navbar-links {
   list-style: none;
   display: flex;
   justify-content: flex-end;
 }
+
 .navbar-links a {
   text-decoration: none;
   color: #333;
@@ -83,7 +85,6 @@ body {
   text-shadow: 0 0 0px rgb(255, 253, 253);
   transition: text-shadow 0.3s;
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
-
 }
 
 .title span:hover {
@@ -168,10 +169,49 @@ h2:hover {
   margin-bottom: 10px;
 }
 
-.card-content-right p:last-child {
-  margin-bottom: 0;
+.card-container .amigos-en-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-/* Estilos generales del footer */
+
+.card-container .amigos-en-bar img {
+  width: 50%;
+  border-radius: 8px;
+}
+.card-container .titulo {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.card-container .titulo h4 {
+  font-size: 34px;
+  margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  background-color: #333;
+  padding: 10px;
+  display: inline-block;
+}
+
+.card-container .titulo .text-container1 {
+  line-height: 1.5;
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  background-color: #f8f8f8;
+  display: inline-block;
+}
+
+.card-container .titulo p {
+  margin-bottom: 15px;
+  color: #555;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  display: inline-block;
+}
+
 .footer {
   background-color: #222;
   color: #fff;
@@ -219,7 +259,6 @@ h2:hover {
   font-size: 12px;
 }
 
-/* Estilos específicos para el enlace de dirección */
 .footer-links a {
   display: inline-block;
   border-bottom: 1px dashed #fff;
@@ -230,12 +269,32 @@ h2:hover {
   border-bottom-color: #ffffff;
 }
 
+/* Media Queries */
+/* Existing styles... */
+
+/* Media queries */
+@media (max-width: 1200px) {
+  .navbar-links a:last-child {
+    display: none;
+  }
+}
+
+@media (max-width: 922px) {
+  .navbar-links a:nth-last-child(2) {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    align-items: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0;
   }
-
   .navbar-links {
     margin-top: 10px;
   }
@@ -291,16 +350,120 @@ h2:hover {
   }
 }
 
-.card-content {
-  background-color: rgba(255, 255, 255, 0.8);
+/* Remaining existing styles... */
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px;
+  text-align: center;
 }
 
-/* Remove unwanted backgrounds */
-#showcase {
-  background: none;
+.footer-content {
+  margin-bottom: 20px;
 }
 
-.title,
-h2 {
-  background: none;
+.footer h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer-social a {
+  color: #fff;
+  font-size: 18px;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #ccc;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ccc;
+}
+
+.footer-text {
+  font-size: 12px;
+}
+
+.footer-links a {
+  display: inline-block;
+  border-bottom: 1px dashed #fff;
+  padding-bottom: 2px;
+}
+
+.footer-links a:hover {
+  border-bottom-color: #ffffff;
+}
+
+/* Media Queries */
+/* Existing styles... */
+
+/* Media queries */
+@media (max-width: 1200px) {
+  .navbar-links a:last-child {
+    display: none;
+  }
+}
+
+@media (max-width: 922px) {
+  .navbar-links a:nth-last-child(2) {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0;
+  }
+  .navbar-links {
+    margin-top: 10px;
+  }
+
+  .navbar-links a {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .card-image-left {
+    order: -1;
+  }
+
+  .card-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+    border-radius: 5px;
+  }
+
+  .card-content {
+    margin: 0;
+    width: 100%;
+  }
+
+  .card-content-right {
+    order: 1;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
 }
